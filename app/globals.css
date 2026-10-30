@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-body);
+}
+
+:root {
+  color-scheme: light;
+  --background: #7a1fe8;
+  --foreground: #fff8ed;
+  --card: #fff8ed;
+  --primary: #361070;
+  --secondary: #d9a8ff;
+  --accent: #ffca3a;
+  --font-display: 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+  --font-body: 'Trebuchet MS', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); }
+button, a { -webkit-tap-highlight-color: transparent; }
