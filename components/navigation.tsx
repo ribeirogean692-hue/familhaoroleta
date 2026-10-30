@@ -12,8 +12,10 @@ export function Navigation() {
     // Check authentication status on client side
     const checkAuthStatus = () => {
       if (typeof window !== 'undefined') {
-        const loggedIn = localStorage.getItem('adminLoggedIn')
-        setIsLoggedIn(loggedIn === 'true')
+        // Check for cookie instead of localStorage (consistent with login page)
+        const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+        const loggedInCookie = cookies.find(cookie => cookie.startsWith('adminLoggedIn='));
+        setIsLoggedIn(!!loggedInCookie && loggedInCookie.split('=')[1] === 'true');
       }
     }
 
