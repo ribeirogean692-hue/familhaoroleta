@@ -19,22 +19,12 @@ export function Navigation() {
             <Link href="/#como-jogar" className="text-primary/60 hover:text-primary transition-colors">Como Jogar</Link>
             <Link href="/#premios" className="text-primary/60 hover:text-primary transition-colors">Prêmios</Link>
             <Link href="/#faq" className="text-primary/60 hover:text-primary transition-colors">FAQ</Link>
-            <Link href="/painel" className="text-primary/60 hover:text-primary transition-colors">Painel Admin</Link>
           </nav>
           
           <div className="flex items-center space-x-4">
             <Button asChild variant="ghost" size="sm" className="hidden md:block">
               <Link href="/painel">Painel Admin</Link>
             </Button>
-            
-            <button 
-              className="md:hidden text-primary/60 hover:text-primary"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
           </div>
         </div>
         
@@ -45,7 +35,6 @@ export function Navigation() {
               <Link href="/#como-jogar" className="text-primary/60 hover:text-primary transition-colors">Como Jogar</Link>
               <Link href="/#premios" className="text-primary/60 hover:text-primary transition-colors">Prêmios</Link>
               <Link href="/#faq" className="text-primary/60 hover:text-primary transition-colors">FAQ</Link>
-              <Link href="/painel" className="text-primary/60 hover:text-primary transition-colors">Painel Admin</Link>
             </div>
           </div>
         )}
